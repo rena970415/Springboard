@@ -33,10 +33,10 @@ public class BoardServiceTests {
 //		boardService.register(boardVO);
 //		log.info("생성된 게시글 번호 : " + boardVO.getBno());
 //	}
-	
+//	
 //	@Test
 //	public void getTest() {
-//		BoardVO boardVO = boardService.get(8L);
+//		BoardVO boardVO = boardService.get(10L);
 //		if(boardVO != null) {
 //			log.info(boardVO);
 //			return;
@@ -46,7 +46,7 @@ public class BoardServiceTests {
 	
 //	@Test
 //	public void modifyTest() {
-//		BoardVO boardVO = boardService.get(0L);
+//		BoardVO boardVO = boardService.get(10L);
 //		if(boardVO == null) {log.info("NO BOARD"); return;}
 //		boardVO.setTitle("신규 등록!");
 //		boardVO.setContent("신규로 등록된 게시글입니다.");
@@ -61,7 +61,7 @@ public class BoardServiceTests {
 	
 //	@Test
 //	public void removeTest() {
-//		BoardVO boardVO = boardService.get(8L);
+//		BoardVO boardVO = boardService.get(10L);
 //		if(boardVO == null) {log.info("no Board"); return;}
 //		
 //		if(boardService.remove(boardVO.getBno())) {
