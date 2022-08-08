@@ -57,17 +57,14 @@ public class BoardMapperTests {
 //	public void updateTest() {
 //		BoardVO boardVO = boardMapper.read(1L);
 //		if(boardVO != null) {
-//			boardVO.setTitle("수정된 제목");
-//			boardVO.setContent("수정된 내용");
+//			boardVO.setTitle("수정된 제목1");
+//			boardVO.setContent("수정된 내용1");
 //			
 //			log.info("UPDATE COUNT : " + boardMapper.update(boardVO));
 //			return;
 //		}
 //		log.info("NO BOARD");
 //	}
-//	
-	
-	
 	
 	
 }

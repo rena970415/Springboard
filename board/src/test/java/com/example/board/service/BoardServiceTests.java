@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.example.board.domain.vo.BoardVO;
+import com.example.board.domain.vo.Criteria;
 
 import lombok.extern.log4j.Log4j;
 
@@ -22,7 +23,7 @@ public class BoardServiceTests {
 	public void sericeTest() {
 		log.info(boardService);
 	}
-	
+//	
 //	@Test
 //	public void registerTest() {
 //		BoardVO boardVO = new BoardVO();
@@ -43,7 +44,7 @@ public class BoardServiceTests {
 //		}
 //		log.info("no BOARD");
 //	}
-	
+//	
 //	@Test
 //	public void modifyTest() {
 //		BoardVO boardVO = boardService.get(10L);
@@ -57,8 +58,8 @@ public class BoardServiceTests {
 //		}
 //		log.info("UPDATE RAILURE!");
 //	}
-	
-	
+//	
+//	
 //	@Test
 //	public void removeTest() {
 //		BoardVO boardVO = boardService.get(10L);
@@ -72,10 +73,10 @@ public class BoardServiceTests {
 //		
 //	}
 //	
-//	@Test
-//	public void getListTest() {
-//		boardService.getList().forEach(log::info);
-//	}
+	@Test
+	public void getListTest() {
+		boardService.getList(new Criteria()).forEach(log::info);
+	}
 	
 	
 	

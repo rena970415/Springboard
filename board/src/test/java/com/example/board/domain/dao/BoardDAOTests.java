@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.example.board.domain.vo.BoardVO;
+import com.example.board.domain.vo.Criteria;
 
 import lombok.extern.log4j.Log4j;
 
@@ -17,11 +18,11 @@ public class BoardDAOTests {
 	@Autowired
 	BoardDAO boardDAO;
 	
-	@Test
-	public void  daoTest() {
-		log.info(boardDAO);
-	}
-	
+//	@Test
+//	public void  daoTest() {
+//		log.info(boardDAO);
+//	}
+//	
 //	@Test
 //	public void registerTest() {
 //		BoardVO boardVO = new BoardVO();
@@ -46,7 +47,7 @@ public class BoardDAOTests {
 //		log.info("UPDATE  : "+boardDAO.modify(boardVO));
 //		
 //	}
-	
+//	
 //	@Test
 //	public void removeTest() {
 //		BoardVO boardVO = boardDAO.get(7L);
@@ -56,10 +57,10 @@ public class BoardDAOTests {
 //		
 //	}
 	
-//	@Test
-//	public void getListTest() {
-//		boardDAO.getList().forEach(log::info);
-//	}
-//	
+	@Test
+	public void getListTest() {
+		boardDAO.getList(new Criteria()).forEach(log::info);
+	}
+	
 	
 }
