@@ -55,7 +55,7 @@ body {	transform: scale(0.8);}
 							<c:forEach var="board" items="${boardList}">
 								<tr class="tBody">
 									<td class="bno">${board.bno}</td>
-									<td class="title"><a href="/board/read?bno=${board.bno}">${board.title}</a></td>
+									<td class="title"><a href="/board/read${pageDTO.criteria.params}&bno=${board.bno}">${board.title}</a></td>
 									<td class="writer">${board.writer}</td>
 									<td class="regDate">${board.regDate}</td>
 									<td class="updateDate">${board.updateDate}</td>

@@ -45,7 +45,7 @@ public class BoardController {
 	}
 	
 	@GetMapping({"/read", "/modify"})
-	public void read(Long bno,   HttpServletRequest request, Model model) {
+	public void read(Criteria  criteria , Long bno,   HttpServletRequest request, Model model) {
 		String url = request.getRequestURI();
 		log.info(url.substring(url.lastIndexOf("/")) + bno);
 		model.addAttribute("board", boardService.get(bno));
@@ -63,12 +63,13 @@ public class BoardController {
 	}
 	
 	
-	@PostMapping("/board/modify")
-	public String modify(BoardVO boardVO, RedirectAttributes rttr) {
+	@PostMapping("/modify")
+	public String modify(Criteria criteria, BoardVO boardVO, RedirectAttributes rttr) {
 		log.info("modify : " + boardVO);
 		if(boardService.modify(boardVO)) {
 			rttr.addFlashAttribute("result","success");
 		}
+		rttr.addAttribute("pageNum", criteria.getPageNum());
 		return "redirect:/board/list";
 	}
 	
