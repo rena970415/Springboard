@@ -14,5 +14,6 @@ public interface BoardDAO {
 	public boolean modify(BoardVO board);
 	public boolean remove(Long bno);
 	public List<BoardVO> getList(Criteria criteria);
+	public int getTotal();
 	
 }
